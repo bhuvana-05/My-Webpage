@@ -4,47 +4,47 @@
   <head>
     <style>
       body {
-           margin:0;
+        margin:0;
         font-family: 'Segoe UI', sans-serif;
         background: linear-gradient (to bottom; midnightblue,slateblue,lightsteelblue);
         color:white;
         padding:40px;
       }
      h1 {
-        text-align:center;
-        color:lavender;
-        text-shadow: 2px 2px 4px black;
-        margin-bottom: 50px;
+      text-align:center;
+      color:lavender;
+      text-shadow: 2px 2px 4px black;
+      margin-bottom: 50px;
      }
     .gallery-box {
-       max-width:700px
-       margin:auto;
-       background-color:ghostwhite;
-       padding: 20px
-       border-radius: 15px;
-       box-shadow: 0 8px 16px gray;
-       position: relative;
-       overflow: hidden;
+      max-width:700px
+      margin:auto;
+      background-color:ghostwhite;
+      padding: 20px
+      border-radius: 15px;
+      box-shadow: 0 8px 16px gray;
+      position: relative;
+      overflow: hidden;
     }
     .gallery-box h2 {
-       color: darkslateblue;
-       text-align: center;
-       margin-bottom: 15px;
+      color: darkslateblue;
+      text-align: center;
+      margin-bottom: 15px;
     }
     .gallery-container {
-       display: flex;
-       overflow-x: auto;
-       scroll-behavior: smooth;
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
     }
     .gallery-container img {
-       width: 300px;
-       margin-night: 15px;
-       border-radius: 10px;
-       box-shadow: 0 4px 8px gray;
-       transition: transform 0.3s;
+      width: 300px;
+      margin-night: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px gray;
+      transition: transform 0.3s;
     }
     .gallery-container img:hover {
-       transform: scale(1.05);
+      transform: scale(1.05);
     }
     .scroll-btn {
       position: absolute;
@@ -68,45 +68,61 @@
       right: 10px;
     }
     .scrolling-strip {
-      overflow: hidden
-      
-    
-      
-          
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+      position: relative;
+      margin-top: 60px;
+      height: 160px;
+    }
+    .scrolling-content {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll-left 40s linear infinite;
+    }
+    .scrolling-content img {
+      height: 150px;
+      width: 250px;
+      margin-right: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+    .scrolling-content img:hover {
+      transform: scale(1.1);
+    }
+    .keyframes scroll-left {
+      0% {
+         transform: translateX(0%);
+      }
+       100% {
+          transform: translateX(-50%);
+       }
+      }
+ </style>
+</head>
+<body>
+
+  <h1> Moonlight Image ShowCase </h1>
+
+  <div class="gallery-box">
+     <h2>  Manual Image Gallery </h2>
+    <button class="scroll-btn scroll-left" onclick="scrollGallery(-320)"> &#8592; </button>
+    <div class="gallery-cpntainer" id="gallery">
+      <img src="https://www.istockphoto.com/vector/realistic-full-moon-gm584764738-100159923.jpg">
+      <img src="https://www.istockphoto.com/photo/full-moon-gm503874466-82824995.jpg">
+      <img src="https://www.shutterstock.com/image-photo/night-sky-full-bright-moon-clouds-1908572875.jpg">
+      <img src="https://stockcake.com/i/moonlit-cloud-dream_1496209_1167329.jpg">
+    </div>
+    <button class="scroll-btn scroll-right" online="scrollgallery(320)"> &#8594; </button>
+  </div>
 
 
 
 
 
-
-
-
-
-
-
-
-      
-    </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-  </head>
+  
+</body>
 
 
 
